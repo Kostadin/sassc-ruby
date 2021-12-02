@@ -89,4 +89,8 @@ if RUBY_ENGINE == 'jruby' &&
   $CXXFLAGS << ' -fPIC'
 end
 
+if RUBY_ENGINE == 'jruby'
+  $ARCH_FLAG = ''
+end
+
 create_makefile 'sassc/libsass'
